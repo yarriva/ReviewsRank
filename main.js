@@ -214,20 +214,17 @@ class SearchFormComponent {
         this.responseList = [];
     }
     submit(f) {
+        console.log('submit');
         let mySearchText = f.value.searchText;
         mySearchText = mySearchText.replace(' ', '%20');
         this.service.getResults(mySearchText)
             .subscribe((data) => {
             this.responseList = data.Response;
-            //Result: data.Result
-            //console.log(this.responseList);
-            //console.log(data);
-            //this.responseList = data;        
         });
     }
 }
 SearchFormComponent.ɵfac = function SearchFormComponent_Factory(t) { return new (t || SearchFormComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_search_result_service__WEBPACK_IMPORTED_MODULE_1__["SearchResultService"])); };
-SearchFormComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: SearchFormComponent, selectors: [["search-form"]], decls: 12, vars: 1, consts: [["novalidate", "", 3, "ngSubmit"], ["f", "ngForm"], [1, "form-group"], [1, "input-group"], [1, "input-group-addon"], [1, "glyphicon", "glyphicon-user"], ["ngModel", "", "name", "searchText", "id", "searcText", "type", "text", "placeholder", "search", 1, "form-control"], ["type", "button", 1, "btn", "btn-warning"], ["src", "https://cdn.iconscout.com/icon/premium/png-256-thumb/magnifying-glass-2390184-2006603.png", "height", "20px"], ["calss", "list-group"], ["class", "list-group-item", 4, "ngFor", "ngForOf"], [1, "list-group-item"], ["height", "60px", 3, "src"]], template: function SearchFormComponent_Template(rf, ctx) { if (rf & 1) {
+SearchFormComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: SearchFormComponent, selectors: [["search-form"]], decls: 12, vars: 1, consts: [["novalidate", "", 3, "ngSubmit"], ["f", "ngForm"], [1, "form-group"], [1, "input-group"], [1, "input-group-addon"], [1, "glyphicon", "glyphicon-user"], ["ngModel", "", "name", "searchText", "id", "searcText", "type", "text", "placeholder", "search", 1, "form-control"], ["type", "button", "type", "submit", 1, "btn", "btn-warning"], ["src", "https://cdn.iconscout.com/icon/premium/png-256-thumb/magnifying-glass-2390184-2006603.png", "height", "20px"], ["calss", "list-group"], ["class", "list-group-item", 4, "ngFor", "ngForOf"], [1, "list-group-item"], ["height", "60px", 3, "src"]], template: function SearchFormComponent_Template(rf, ctx) { if (rf & 1) {
         const _r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "form", 0, 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngSubmit", function SearchFormComponent_Template_form_ngSubmit_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r3); const _r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](1); return ctx.submit(_r0); });
